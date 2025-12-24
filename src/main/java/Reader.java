@@ -45,10 +45,10 @@ public class Reader {
     }
 
     private boolean isValidHeader(String currentLine) {
-        final int MIN_VALID_LENGTH = 2;
+        // Any valid Markdown header is at least three characters long
+        final int MIN_VALID_LENGTH = 3;
 
         if (currentLine.length() >= MIN_VALID_LENGTH) {
-
             int i = 0;
             if (currentLine.charAt(i++) == '#') {
                 while (currentLine.charAt(i) == '#') {
